@@ -9,6 +9,7 @@ This is a fun and interactive Bingo game created for the 2nd anniversary celebra
 - Players can resume their game if they leave and return by entering the same name.
 - Animated interactions for word selection and drawing.
 - A festive theme matching the ACE TEAM logo and colors.
+- Generate and print Bingo cards with a customizable number of cards and grid size (5x5 or 4x4).
 
 ## Technologies Used
 
@@ -25,6 +26,7 @@ This is a fun and interactive Bingo game created for the 2nd anniversary celebra
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/ace-team-bingo.git
    cd ace-team-bingo
@@ -50,6 +52,13 @@ This is a fun and interactive Bingo game created for the 2nd anniversary celebra
 3. The drawn word will be displayed on the screen and saved to the Firebase database.
 4. Click "Reset Game" to reset all game data for a new round.
 
+### Print Bingo Cards
+
+1. Open the Print Bingo cards URL in your browser (e.g., print.html).
+2. Enter the number of cards and select the card size (5x5 or 4x4).
+3. Click "Generate Cards" to create the Bingo cards.
+4. Click "Print Cards" to open the print dialog and print the generated Bingo cards.
+
 ## Customization
 
 - **Theme and Styles:** You can customize the theme and styles in `style.css` to match your preferences.
@@ -59,12 +68,16 @@ This is a fun and interactive Bingo game created for the 2nd anniversary celebra
 
 - `index.html`: The main HTML file for the player interface.
 - `controller.html`: The HTML file for the game controller interface.
+- `print.html`: The HTML file for generating and printing Bingo cards.
 - `style.css`: The CSS file for styling the game.
+- `print.css`: The CSS file for styling the printable Bingo cards.
 - `card.js`: The JavaScript file for handling player interactions.
 - `controller.js`: The JavaScript file for handling controller interactions.
+- `print.js`: The JavaScript file for generating and printing Bingo cards.
 - `config.js`: The configuration file for Firebase and the words list.
 
 ## Acknowledgements
+
 - Thanks to the ACE TEAM volleyball team for providing the logo and theme inspiration.
 - [Firebase](https://firebase.google.com/) for the real-time database services.
 
