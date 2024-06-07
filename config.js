@@ -1,10 +1,13 @@
+require('dotenv').config();
+
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCwfZ2Vf_EqcALCqDBs5zdYH3hUG7nR69g',
-  authDomain: 'bingo-da4be.firebaseapp.com',
-  projectId: 'bingo-da4be',
-  storageBucket: 'bingo-da4be.appspot.com',
-  messagingSenderId: '329147174796',
-  appId: '1:329147174796:web:3ab93b0acd78682b4110a9',
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID,
 };
 
 export const words = [
