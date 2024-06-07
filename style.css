@@ -1,0 +1,75 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+#controller, #card-container {
+  margin: 20px;
+}
+
+#draw-word {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+#current-word {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #000;
+  margin: 10px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.card-header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.card td, .card th {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+
+.card td {
+  cursor: pointer;
+  width: 85px;
+  height: 85px;
+}
+
+.card td.selected {
+  background-color: #a2d5a2 !important;
+}
+
+.card td.freespace {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .card td, .card th {
+    padding: 5px;
+    font-size: 12px;
+  }
+}
