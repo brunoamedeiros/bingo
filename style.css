@@ -1,22 +1,80 @@
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', cursive, sans-serif;
   text-align: center;
-  background-color: #f0f0f0;
+  background: linear-gradient(135deg, #008cfe, #88d0ff , #42dffe, #a0faf6, #b8fa74, #f8c689, #ff83b6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;  
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#welcome-container {  
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  align-items: center;
+}
+
+#welcome-container input {
+  height: 45px;
+  width: 50%;
+  border: 0 none;
+  padding: 15px;
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+
+#welcome-message {
+  text-transform: capitalize;
 }
 
 #controller, #card-container {
   margin: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#draw-word, #start-game, #reset-game {
+  padding: 20px 20px;
+  font-size: 16px;
+  margin: 5px;  
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-game {
+  background: #008cfe;
 }
 
 #draw-word {
-  padding: 10px 20px;
-  font-size: 16px;
+  background-color: darkgreen;
+}
+
+#reset-game {
+  background-color: darkred;
 }
 
 #current-word {
   margin-top: 20px;
   font-size: 24px;
   font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
 }
 
 #cards {
@@ -26,19 +84,22 @@ body {
 }
 
 .card {
-  border: 1px solid #000;
+  border: 2px solid #88d0ff;
   margin: 10px;
   padding: 10px;
   background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-header {
-  background-color: #000;
-  color: #fff;
+  background-color: #88d0ff;
+  color: white;
   padding: 10px;
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  border-radius: 10px 10px 0 0;
 }
 
 .card table {
@@ -47,29 +108,63 @@ body {
 }
 
 .card td, .card th {
-  border: 1px solid #000;
+  border: 2px solid #88d0ff;
   padding: 10px;
   text-align: center;
-}
-
-.card td {
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
   width: 85px;
   height: 85px;
 }
 
 .card td.selected {
-  background-color: #a2d5a2 !important;
+  background-color: #90ee90;
+  animation: pulse 0.5s;
 }
 
 .card td.freespace {
-  background-color: #e0e0e0;
+  background-color: #eee;
   font-weight: bold;
+}
+
+#drawn-words {
+  margin-top: 20px;
+}
+
+#words-list {
+  list-style: none;
+  padding: 0;
+}
+
+#words-list li {
+  margin-bottom: 15px;
 }
 
 @media (max-width: 600px) {
   .card td, .card th {
     padding: 5px;
-    font-size: 12px;
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
   }
 }

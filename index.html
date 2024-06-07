@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartela de Bingo</title>
+  <title>Cartela de Bingo - ACE TEAM</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="card.js"></script>
 </head>
 <body>
   <div id="welcome-container">
-    <h1>Bem-vindo ao Bingo!</h1>
+    <img src="logo-black.png" alt="ACE TEAM Logo" style="width: 150px; margin-bottom: 20px;">
+    <h1>Bem-vindo ao Bingo! <br /> Ace Edition</h1>
     <p>Por favor, insira seu nome:</p>
     <input type="text" id="player-name" placeholder="Seu nome">
     <button id="start-game">Começar</button>
@@ -17,7 +19,10 @@
     <h1 id="welcome-message"></h1>
     <h2>Aqui está sua cartela de bingo, boa sorte!</h2>
     <div id="cards"></div>
+    <div id="drawn-words">
+      <h3>Palavras Sorteadas</h3>
+      <ul id="words-list"></ul>
+    </div>
   </div>
-  <script src="card.js"></script>
 </body>
 </html>
