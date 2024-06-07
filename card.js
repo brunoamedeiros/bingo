@@ -5,12 +5,9 @@ import {
   set,
   get,
   onValue,
-  runTransaction,
-  push,
 } from 'https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js';
 import { firebaseConfig, words } from './config.js';
 
-// Inicializa o Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 

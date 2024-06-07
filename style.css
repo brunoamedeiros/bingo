@@ -1,14 +1,17 @@
-html, body {
-  height: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Arial', cursive, sans-serif;
   text-align: center;
   background: linear-gradient(135deg, #008cfe, #88d0ff , #42dffe, #a0faf6, #b8fa74, #f8c689, #ff83b6);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  color: #333;  
+  color: #222;  
+  height: 100%;
 }
 
 @keyframes gradientBG {
@@ -39,12 +42,19 @@ body {
   text-transform: capitalize;
 }
 
-#controller, #card-container {
-  margin: 20px;
+#controller, #drawn-words {  
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#drawn-words {
+  margin: 10px;
+}
+
+#card-container {
+  margin-bottom: 20px;
 }
 
 #draw-word, #start-game, #reset-game {
@@ -84,22 +94,22 @@ body {
 }
 
 .card {
-  border: 2px solid #88d0ff;
-  margin: 10px;
-  padding: 10px;
+  border: 2px solid #222;
+  margin: 10px;  
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  word-break: break-word;
 }
 
 .card-header {
-  background-color: #88d0ff;
+  background-color: #222;
   color: white;
   padding: 10px;
   font-size: 24px;
   font-weight: bold;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
+  text-align: center;  
+  border-radius: 5px 5px 0 0;
 }
 
 .card table {
@@ -108,7 +118,7 @@ body {
 }
 
 .card td, .card th {
-  border: 2px solid #88d0ff;
+  border: 2px solid #222;
   padding: 10px;
   text-align: center;
   cursor: pointer;
@@ -116,6 +126,9 @@ body {
   font-size: 18px;
   width: 85px;
   height: 85px;
+  word-wrap: break-word;
+  overflow: hidden;
+  box-sizing: border-box
 }
 
 .card td.selected {
@@ -126,10 +139,6 @@ body {
 .card td.freespace {
   background-color: #eee;
   font-weight: bold;
-}
-
-#drawn-words {
-  margin-top: 20px;
 }
 
 #words-list {

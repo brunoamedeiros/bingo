@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprimir Bingo - ACE TEAM</title>
+  <link rel="stylesheet" href="print.css">
+  <script type="module" src="print.js"></script>
+</head>
+<body>
+  <div id="print-container">
+    <h1>Imprimir Bingo - ACE TEAM</h1>
+    <label for="card-count">Número de Cartelas:</label>
+    <input type="number" id="card-count" min="1" max="100" value="1">
+    
+    <label for="card-size">Tamanho da Cartela:</label>
+    <select id="card-size">
+      <option value="5x5">5x5</option>
+      <option value="4x4">4x4</option>
+    </select>
+    
+    <button id="generate-cards">Gerar Bingo</button>
+    <button id="print-cards">Imprimir Bingo</button>
+
+    <div id="cards-container"></div>
+  </div>
+</body>
+</html>
